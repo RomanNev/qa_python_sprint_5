@@ -41,10 +41,16 @@ class ProfilePageLocators:
 class ConstructorPageLocators:
     SUBMIT_BUTTON_PLACE_AN_ORDER = (By.XPATH, ".//button[text() = 'Оформить заказ']")
     CONSTRUCTOR_BUTTON = (By.XPATH, './/a[@href="/"]/p')  # кнопка перехода на страницу с конструктором
-    TAB_BUNS = (By.XPATH, ".//section/div[@style = 'display: flex;']/div[1]")  # таб булки на главной
-    TAB_SAUCES = (By.XPATH, ".//section/div[@style = 'display: flex;']/div[2]")  # таб соусы на главной
-    TAB_FILLINGS = (By.XPATH, ".//section/div[@style = 'display: flex;']/div[3]")  # таб начинки на главной
     CONSTRUCTOR_TITLE = (By.XPATH, ".//h1[contains(@class, 'text')]")
     CONSTRUCTOR_LOGO = (By.XPATH, ".//div[contains(@class, 'AppHeader_header__logo')]")
+
+    TAB_BUNS = (By.XPATH, ".//span[text()='Булки']")  # таб булки на главной
+    TAB_SAUCES = (By.XPATH, ".//span[text()='Соусы']")  # таб соусы на главной
+    TAB_FILLINGS = (By.XPATH, ".//span[text()='Начинки']")  # таб начинки на главной
+
+    TAB_BUNS_SELECT = (By.XPATH, ".//span[text()='Булки']/..")  # таб булки на главной выбранный
+    TAB_SAUCES_SELECT = (By.XPATH, ".//span[text()='Соусы']/..")  # таб соусы на главной выбранный
+    TAB_FILLINGS_SELECT = (By.XPATH, ".//span[text()='Начинки']/..")  # таб начинки на главной выбранный
+
 
 
