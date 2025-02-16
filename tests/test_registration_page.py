@@ -1,3 +1,5 @@
+import time
+
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
@@ -16,7 +18,7 @@ class TestRegistrationPage:
         driver.find_element(*RegistrationPageLocators.INPUT_PASSWORD_REGISTRATION).send_keys(password)
         driver.find_element(*RegistrationPageLocators.SUBMIT_BUTTON_REGISTRATION_ACCOUNT).click()
 
-        WebDriverWait(driver, 5).until(expected_conditions.visibility_of_element_located((LoginPageLocators.INPUT_EMAIL_LOGIN)))
+        WebDriverWait(driver, 5).until(expected_conditions.visibility_of_element_located((LoginPageLocators.SUBMIT_BUTTON_LOGIN_TO_ACCOUNT)))
 
         # авторизация с кредами созданного пользователя на этапе регистрации
         driver.find_element(*LoginPageLocators.INPUT_EMAIL_LOGIN).send_keys(email)
