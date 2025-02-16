@@ -34,7 +34,7 @@ class ForgotPasswordLocators:
 
 
 class ProfilePageLocators:
-    pass
+    ACCOUNT_TEXT_IN_PROFILE = (By.XPATH, ".//p[contains(@class, 'Account_text')]") # текст на странице профиля
 
 
 class ConstructorPageLocators:
@@ -43,3 +43,7 @@ class ConstructorPageLocators:
     TAB_BUNS = (By.XPATH, ".//section/div[@style = 'display: flex;']/div[1]")  # таб булки на главной
     TAB_SAUCES = (By.XPATH, ".//section/div[@style = 'display: flex;']/div[2]")  # таб соусы на главной
     TAB_FILLINGS = (By.XPATH, ".//section/div[@style = 'display: flex;']/div[3]")  # таб начинки на главной
+    CONSTRUCTOR_TITLE = (By.XPATH, ".//h1[contains(@class, 'text')]")
+    CONSTRUCTOR_LOGO = (By.XPATH, ".//div[contains(@class, 'AppHeader_header__logo')]")
+
+

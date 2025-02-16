@@ -7,6 +7,7 @@ from selenium import webdriver
 def driver():  # создание и закрытие драйвера/браузера
     print("\nstart browser for test..")
     driver = webdriver.Chrome()
+    driver.implicitly_wait(10)  # установка неявного ожидания (10 секунд)
     yield driver
     print("\nquit browser..")
     driver.quit()
