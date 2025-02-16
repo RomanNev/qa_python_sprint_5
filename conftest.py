@@ -11,13 +11,21 @@ def driver():  # создание и закрытие драйвера/брау�
     print("\nquit browser..")
     driver.quit()
 
+
 @pytest.fixture()  # генерируем логинчик
-def login():
+def name():
+    prefix = "golub"
+    random_number = random.randint(100, 10000)
+    name = f"{prefix}-{random_number}"
+    return name
+
+@pytest.fixture()  # генерируем логинчик
+def email():
     prefix = "best_power_incredible"
     domain = "ru"
     random_number = random.randint(100, 10000)
-    login = f"{prefix}@{random_number}.{domain}"
-    return login
+    email = f"{prefix}@{random_number}.{domain}"
+    return email
 
 @pytest.fixture()  # генерируем паролик
 def password(length=8):
