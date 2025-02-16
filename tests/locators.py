@@ -9,6 +9,7 @@ class LoginPageLocators:
     By.XPATH, ".//button[text() = 'Войти']")  # кнопка входа в аккаунт на странице входа
     INPUT_EMAIL_LOGIN = (By.XPATH, ".//input[@name='name']")  # поле ввода имени на странице регистрации
     INPUT_PASSWORD_LOGIN = (By.XPATH, ".//input[@name='Пароль']")  # поле ввода email на странице регистрации
+    BUTTON_LOGOUT_ACCOUNT  = (By.XPATH, ".//ul/li[3]/button")  # кнопка выхода из аккаунта в личном кабинете
 
 
 class RegistrationPageLocators:
