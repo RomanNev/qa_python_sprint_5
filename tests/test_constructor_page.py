@@ -1,8 +1,9 @@
 from locators import  ConstructorPageLocators
+import data
 
 class TestConstructorPage:
     def test_navigate_to_buns_section(self, driver): # переход к разделу булки
-        driver.get("https://stellarburgers.nomoreparties.site/")
+        driver.get(data.BASE_URL)
         driver.find_element(*ConstructorPageLocators.TAB_FILLINGS).click() # Сначала переходим в начинки, таб булки выделен по умолчанию
         driver.find_element(*ConstructorPageLocators.TAB_BUNS).click() # возвращаемся в булки
 
@@ -12,7 +13,7 @@ class TestConstructorPage:
 
 
     def test_navigate_to_sauces_section(self, driver): # переход к разделу соус
-        driver.get("https://stellarburgers.nomoreparties.site/")
+        driver.get(data.BASE_URL)
         driver.find_element(*ConstructorPageLocators.TAB_SAUCES).click()
 
         sauces_tab = driver.find_element(*ConstructorPageLocators.TAB_SAUCES_SELECT)
@@ -20,7 +21,7 @@ class TestConstructorPage:
         assert "tab_type_current" in sauces_tab.get_attribute('class')
 
     def test_navigate_to_fillings_section(self, driver): # переход к разделу начинки
-        driver.get("https://stellarburgers.nomoreparties.site/")
+        driver.get(data.BASE_URL)
         driver.find_element(*ConstructorPageLocators.TAB_FILLINGS).click()
 
         fillings_tab =  driver.find_element(*ConstructorPageLocators.TAB_FILLINGS_SELECT)
